@@ -1,0 +1,10 @@
+name: nahkdMisc
+author: nahkd123
+main: me.nahkd.misc.core.nahkdMiscPlugin
+version: 1.0.0
+api-version: 1.15
+
+commands:
+  nmtest:
+    description: A test command
+    permission: nahkdmisc.debug.test
