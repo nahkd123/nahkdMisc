@@ -4,6 +4,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.nahkd.misc.core.commands.DebugTestCommand;
+import me.nahkd.misc.core.eventslisteners.BlockListener;
 import me.nahkd.misc.core.eventslisteners.InventoryListener;
 import me.nahkd.misc.core.services.ItemService;
 import me.nahkd.misc.core.services.RegistryService;
@@ -32,13 +33,14 @@ public class nahkdMiscPlugin extends JavaPlugin {
 		
 		// #Internals
 		getServer().getConsoleSender().sendMessage("§3[Internal] §bLoading internal extension...");
-		nahkdMisc.loadExtension(new InternalExtension());
+		nahkdMisc.loadExtension(new InternalExtension(this));
 		
 		// #Commands
 		getCommand("nmtest").setExecutor(new DebugTestCommand());
 		
 		// #Events
 		getServer().getPluginManager().registerEvents(new InventoryListener(), this);
+		getServer().getPluginManager().registerEvents(new BlockListener(), this);
 		
 		// #Schedule thing
 		getServer().getScheduler().scheduleSyncDelayedTask(this, () -> {

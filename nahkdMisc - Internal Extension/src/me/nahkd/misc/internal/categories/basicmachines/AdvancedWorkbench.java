@@ -5,7 +5,7 @@ import org.bukkit.inventory.ItemStack;
 
 import me.nahkd.misc.core.item.ItemBuilder;
 import me.nahkd.misc.core.item.MiscItem;
-import me.nahkd.misc.internal.recipes.AdvancedWorkbenchRecipes;
+import me.nahkd.misc.internal.recipes.CraftingTableRecipes;
 
 public class AdvancedWorkbench extends MiscItem {
 
@@ -18,9 +18,9 @@ public class AdvancedWorkbench extends MiscItem {
 				.create()
 				);
 		
-		addRecipe(AdvancedWorkbenchRecipes.getRecipeType(),
-				null, null, null,
+		addRecipe(CraftingTableRecipes.getRecipeType(),
 				new ItemStack(Material.COBBLESTONE), new ItemStack(Material.CRAFTING_TABLE), new ItemStack(Material.COBBLESTONE),
+				new ItemStack(Material.COBBLESTONE), null, new ItemStack(Material.COBBLESTONE),
 				new ItemStack(Material.COBBLESTONE), null, new ItemStack(Material.COBBLESTONE)
 				);
 	}

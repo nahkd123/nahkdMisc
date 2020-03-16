@@ -8,19 +8,18 @@ import me.nahkd.misc.core.item.ItemBuilder;
 import me.nahkd.misc.core.recipe.CustomRecipe;
 import me.nahkd.misc.core.recipe.RecipeType;
 
-public class AdvancedWorkbenchRecipes extends RecipeType {
+public class CraftingTableRecipes extends RecipeType {
 
 	private static final ItemStack ICON = new ItemBuilder(Material.CRAFTING_TABLE)
-			.displayName("§eAdvanced Workbench")
-			.lore("", "§7This item can be crafted", "§7by using §eAdvanced Workbench")
+			.lore("", "§7This item can be crafted", "§7by using normal crafting", "§7table")
 			.create();
 	
-	private static AdvancedWorkbenchRecipes RECIPE;
-	public static AdvancedWorkbenchRecipes getRecipeType() {
+	private static CraftingTableRecipes RECIPE;
+	public static CraftingTableRecipes getRecipeType() {
 		return RECIPE;
 	}
 	
-	public AdvancedWorkbenchRecipes() {
+	public CraftingTableRecipes() {
 		RECIPE = this;
 	}
 	
